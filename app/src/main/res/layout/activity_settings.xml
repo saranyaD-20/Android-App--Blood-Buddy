@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0F2E9">
+
+    <!-- ScrollView to handle long content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Account Information Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Information"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:paddingTop="22dp"
+                android:paddingBottom="8dp"
+                android:fontFamily="@font/poppins_semibold"/>
+
+            <!-- Personal Information -->
+            <LinearLayout
+                android:id="@+id/personalInfoSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@android:color/white"
+                android:padding="19dp"
+                android:layout_marginBottom="1dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_p"
+                    android:layout_marginEnd="16dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Personal Information"
+                    android:textSize="19sp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+            </LinearLayout>
+
+            <!-- Notifications -->
+            <LinearLayout
+                android:id="@+id/notificationsSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@android:color/white"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_notifications"
+                    android:layout_marginEnd="16dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Notifications"
+                    android:textSize="19sp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+            </LinearLayout>
+
+            <!-- App Settings Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="App Settings"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"
+                android:fontFamily="@font/poppins_semibold"/>
+
+            <!-- Health Data -->
+            <LinearLayout
+                android:id="@+id/healthDataSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@android:color/white"
+                android:padding="16dp"
+                android:layout_marginBottom="1dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Health Data"
+                    android:textSize="19sp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_heart" />
+            </LinearLayout>
+
+            <!-- About -->
+            <LinearLayout
+                android:id="@+id/aboutUsSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@android:color/white"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="About"
+                    android:textSize="19sp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_about" />
+            </LinearLayout>
+
+            <!-- Feedback Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/feedbackButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/white"
+                android:text="Feedback"
+                android:textSize="19sp"
+                android:textColor="#000000"
+                android:padding="16dp"
+                android:layout_marginBottom="1dp" />
+
+            <!-- Support Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/supportButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/white"
+                android:text="Support"
+                android:textSize="19sp"
+                android:textColor="#000000"
+                android:padding="16dp"
+                android:layout_marginBottom="1dp" />
+
+            <!-- 🔴 Delete Account Button (Same style as Log Out) -->
+            <Button
+                android:id="@+id/deleteAccountBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Delete Account"
+                android:textSize="16sp"
+                android:textColor="#FF0000"
+                android:background="@android:color/transparent"
+                android:padding="16dp"
+                android:layout_marginTop="8dp" />
+
+            <!-- 🔴 Log Out Button -->
+            <Button
+                android:id="@+id/logOutSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Log out"
+                android:textSize="16sp"
+                android:textColor="#FF0000"
+                android:background="@android:color/transparent"
+                android:padding="16dp"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#4E0A0A"
+        android:elevation="0dp"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:backgroundTint="#CC0000"
+        app:itemBackground="@null"
+        app:itemIconSize="25dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="8dp"
+        app:labelVisibilityMode="unlabeled"
+        app:itemRippleColor="#D81B60" />
+
+</RelativeLayout>

@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F8F7F7"> <!-- Soft Green Background -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_right"
+            android:text="🍽️ 7-Day Lunch Plan (Diabetes)"
+            android:layout_gravity="center"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#D81B60"
+            android:paddingBottom="8dp" />
+
+        <!-- Description -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Carefully selected iron-rich foods to improve blood levels."
+            android:textSize="12sp"
+            android:textColor="#444"
+            android:paddingBottom="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_gravity="center"/>
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🗓️ Day-wise Meals"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#00796B"
+            android:paddingBottom="8dp" />
+
+        <!-- Day 01 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="6dp"
+            android:text="DAY 1"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#FFEBEE">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/brown_rice_dal"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rounded_corner" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🍚 Brown Rice with Dal Vegetable Sabzi"
+                        android:textSize="16sp"
+                        android:textColor="#B71C1C"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fiber-rich brown rice paired with protein-packed dal and nutritious vegetable sabzi."
+                        android:textSize="14sp"
+                        android:textColor="#444" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Day 02 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DAY 2"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:paddingTop="10dp"
+            android:paddingBottom="6dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#E8F5E9">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/methi"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rounded_corner" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🥙 Methi Roti with Palak (Spinach) Dal"
+                        android:textSize="16sp"
+                        android:textColor="#1B5E20"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Iron-rich methi roti paired with spinach dal for a wholesome meal."
+                        android:textSize="14sp"
+                        android:textColor="#444" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Day 03 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DAY 3"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:paddingTop="10dp"
+            android:paddingBottom="6dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#FFF3E0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/curd_rice"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rounded_corner" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🍚 Curd Rice (Made with Brown Rice)"
+                        android:textSize="16sp"
+                        android:textColor="#BF360C"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cooling curd rice made with fiber-rich brown rice for a light lunch."
+                        android:textSize="14sp"
+                        android:textColor="#444" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Day 04 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DAY 4"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:paddingTop="10dp"
+            android:paddingBottom="6dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#E3F2FD">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/quinoa_khichdi"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rounded_corner" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🍲 Quinoa Khichdi with Curd"
+                        android:textSize="16sp"
+                        android:textColor="#0D47A1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nutritious quinoa khichdi served with protein-rich curd."
+                        android:textSize="14sp"
+                        android:textColor="#444" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Day 05 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DAY 5"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:paddingTop="10dp"
+            android:paddingBottom="6dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#F1F8E9">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/vegetable_sambar"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rounded_corner" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🍲 Mixed Vegetable Sambar with Red Rice"
+                        android:textSize="16sp"
+                        android:textColor="#33691E"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Flavorful mixed vegetable sambar paired with fiber-rich red rice."
+                        android:textSize="14sp"
+                        android:textColor="#444" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Day 06 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DAY 6"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:paddingTop="10dp"
+            android:paddingBottom="6dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#FBE9E7">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/chana_salad"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rounded_corner" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🥗 Chana (Black Chickpeas) Onion Salad with Roti"
+                        android:textSize="16sp"
+                        android:textColor="#E64A19"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Protein-rich chana and onion salad served with whole wheat roti."
+                        android:textSize="14sp"
+                        android:textColor="#444" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Day 07 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DAY 7"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:paddingTop="10dp"
+            android:paddingBottom="6dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#E0F7FA">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/sprouted_moong_dal_curry"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rounded_corner" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🍲 Sprouted Moong Dal Curry with Rice"
+                        android:textSize="16sp"
+                        android:textColor="#006064"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nutritious sprouted moong dal curry paired with rice for a balanced meal."
+                        android:textSize="14sp"
+                        android:textColor="#444" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

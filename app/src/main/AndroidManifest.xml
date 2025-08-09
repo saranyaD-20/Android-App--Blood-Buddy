@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- ✅ Move permissions to the correct place, above <application> -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <!-- Add permissions for notifications -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Bloodbuddy"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+        <!-- Register the NotificationSchedulerService -->
+
+        <!-- Register the ReminderReceiver -->
+        <receiver
+            android:name=".ReminderReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- Register a boot receiver to restart notifications after device reboot -->
+        <receiver
+            android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Register the NotificationSettingsActivity -->
+        <activity
+            android:name=".NotificationSettingsActivity"
+            android:exported="false"
+            android:label="Notification Settings"
+            android:launchMode="singleTop"
+            android:taskAffinity=""
+            android:parentActivityName=".SettingsActivity" />
+
+        <activity
+            android:name=".AboutUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationsActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:taskAffinity=""
+            android:label="Notifications" />
+        <activity
+            android:name=".snack_plan_pregnancy"
+            android:exported="false" />
+        <activity
+            android:name=".dinner_plan_pregnancy"
+            android:exported="false" />
+        <activity
+            android:name=".lunch_plan_pregnancy"
+            android:exported="false" />
+        <activity
+            android:name=".breakfast_plan_pregnancy"
+            android:exported="false" />
+        <activity
+            android:name=".veg_snack_men"
+            android:exported="false" />
+        <activity
+            android:name=".dinner_plan_mensuration"
+            android:exported="false" />
+        <activity
+            android:name=".lunch_plan_mensuration"
+            android:exported="false" />
+        <activity
+            android:name=".breakfast_plan_menstruation"
+            android:exported="false" />
+        <activity
+            android:name=".selectday_dia"
+            android:exported="false" />
+
+        <activity
+            android:name=".veg_breakfast_dia"
+            android:exported="false" />
+        <activity
+            android:name=".nonveg_breakfast_dai"
+            android:exported="false" />
+        <activity
+            android:name=".nonveg_lunch_dia"
+            android:exported="false" />
+        <activity
+            android:name=".nonveg_dinner_dia"
+            android:exported="false" />
+        <activity
+            android:name=".nonveg_snack_dia"
+            android:exported="false" />
+        <activity
+            android:name=".selectday_men"
+            android:exported="false" />
+        <activity
+            android:name=".diet_men"
+            android:exported="false" />
+        <activity
+            android:name=".veg_breakfast_men"
+            android:exported="false" />
+        <activity
+            android:name=".veg_lunch_men"
+            android:exported="false" />
+        <activity
+            android:name=".veg_dinner_men"
+            android:exported="false" />
+        <activity
+            android:name=".veg_lunch_dia"
+            android:exported="false" />
+        <activity
+            android:name=".veg_dinner_dia"
+            android:exported="false" />
+        <activity
+            android:name=".veg_snack_dia"
+            android:exported="false" />
+        <activity
+            android:name=".deit_diabetes"
+            android:exported="false" />
+        <activity
+            android:name=".selectda_nonveg_dia"
+            android:exported="false" />
+
+        <activity
+            android:name=".snack_plan_anemia"
+            android:exported="false" />
+        <activity
+            android:name=".nonveg_dinner_anemia"
+            android:exported="false" />
+        <activity
+            android:name=".ChatbotActivity"
+            android:exported="false" />
+        <activity
+            android:name=".nonveg_breakfast_anemia"
+            android:exported="false" />
+        <activity
+            android:name=".nonveg_snack_anemia"
+            android:exported="false" />
+        <activity
+            android:name=".nonveg_lunch_anemia"
+            android:exported="false" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".mensuration_food_option"
+            android:exported="false" />
+        <activity
+            android:name=".diabetes_food_option"
+            android:exported="false" />
+        <activity
+            android:name=".veg_dinner_anemia"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" /> <!-- Main Entry Point -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Registration Activity -->
+        <activity
+            android:name=".registeractivity"
+            android:exported="true" /> <!-- Profile Page -->
+        <activity
+            android:name=".Profile"
+            android:exported="true" /> <!-- Health Condition Page -->
+        <activity
+            android:name=".HealthCondition"
+            android:exported="false" /> <!-- Security & Privacy -->
+        <activity
+            android:name=".SecurityPrivacyActivity"
+            android:exported="false" />
+
+        <activity android:name=".DietPreferencesActivity" />
+        <activity android:name=".SelectDayActivity" />
+        <activity
+            android:name=".vegan_breakfast_anemia"
+            android:exported="false" />
+        <activity
+            android:name=".vegan_lunch_anemai"
+            android:exported="false" />
+        <activity
+            android:name=".vegan_dinner_anemia"
+            android:exported="false" />
+        <activity
+            android:name=".vegan_snack_anemia"
+            android:exported="false" />
+        <activity
+            android:name=".selectday_veg"
+            android:exported="false" />
+
+        <activity
+            android:name=".veg_breakfast_anemia"
+            android:exported="false" />
+        <activity
+            android:name=".veg_lunch_anemia"
+            android:exported="false" />
+
+        <activity
+            android:name=".veg_snack_anemia"
+            android:exported="false" />
+        <activity
+            android:name=".veg_hypertension_breakfast"
+            android:exported="false" />
+        <activity
+            android:name=".deit_hypertension"
+            android:exported="false" />
+        <activity
+            android:name=".select_day_hypertension"
+            android:exported="false" />
+        <activity
+            android:name=".selectday_veg_hyper"
+            android:exported="false" />
+        <activity
+            android:name=".veg_hypertension_snack"
+            android:exported="false" />
+        <activity
+            android:name=".veg_hypertension_dinner"
+            android:exported="false" />
+        <activity
+            android:name=".veg_hypertension_lunch"
+            android:exported="false" />
+        <activity
+            android:name=".selectday_nonveg_hyper"
+            android:exported="false" />
+        <activity
+            android:name=".non_veg_hypertension_breakfast"
+            android:exported="false" />
+        <activity
+            android:name=".nonve_dinner_hypertension"
+            android:exported="false" />
+        <activity
+            android:name=".non_veg_snack_hypertension"
+            android:exported="false" />
+        <activity
+            android:name=".non_veg_lunch_hypertension"
+            android:exported="false" />
+        <activity
+            android:name=".selectday_nonveg_men"
+            android:exported="false" />
+        <activity
+            android:name=".nonveg_breakfast_men"
+            android:exported="false" />
+        <activity
+            android:name=".nonveg_lunch_men"
+            android:exported="false" />
+        <activity
+            android:name=".nonveg_dinner_men"
+            android:exported="false" />
+        <activity
+            android:name=".nonveg_snack_men"
+            android:exported="false" />
+        <activity
+            android:name=".select_per"
+            android:exported="false" />
+        <activity
+            android:name=".selectday_nonveg_per"
+            android:exported="false" />
+        <activity
+            android:name=".veg_breakfast_per"
+            android:exported="false" />
+        <activity
+            android:name=".veg_lunch_per"
+            android:exported="false" />
+        <activity
+            android:name=".veg_dinner_per"
+            android:exported="false" />
+        <activity
+            android:name=".nonveg_snack_per"
+            android:exported="false" />
+        <activity
+            android:name=".nonveg_dinner_per"
+            android:exported="false" />
+        <activity
+            android:name=".nonveg_breakfast_per"
+            android:exported="false" />
+        <activity
+            android:name=".nonveg_lunch_per"
+            android:exported="false" />
+        <activity
+            android:name=".deit_per"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

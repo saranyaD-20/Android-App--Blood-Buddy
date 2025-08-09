@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DFE9E6">
+
+    <!-- ScrollView for the main content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="#FFE5E5"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BLOOD BUDDY"
+                    android:textColor="#D00000"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/cooper"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <!-- Greeting -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello Sara!"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grow with love, track with care."
+                android:textColor="#6A5ACD"
+                android:textSize="19sp"
+                android:fontFamily="@font/ribeyemarrow_regular"/>
+
+            <!-- Pregnancy Status -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pregnancy Status"
+                android:textStyle="bold"
+                android:background="#F0BBBB"
+                android:padding="8dp"
+                android:textColor="#000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="#FFB5CD"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hemoglobin Level: "
+                    android:textSize="13sp"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/txtHemoglobin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10.5 mg/dl"
+                    android:textSize="13sp"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  Goal level: "
+                    android:textSize="13sp"
+                    android:textColor="#0B0A0A" />
+
+                <TextView
+                    android:id="@+id/txtGoal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15 mg/dl"
+                    android:textSize="13sp"
+                    android:textColor="#0B0A0A" />
+            </LinearLayout>
+
+            <!-- Progress Bar -->
+
+            <!-- Meal Sections -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <!-- Breakfast Card -->
+                <LinearLayout
+                    android:id="@+id/breakfast_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:background="#D5B586"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp"
+                    android:elevation="4dp">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="85dp"
+                        android:src="@drawable/breakfast_icon"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Breakfast"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:paddingStart="10dp"
+                        android:textColor="#000" />
+
+                    <ImageView
+                        android:id="@+id/btn_breakfast_arrow"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_right"
+                        android:contentDescription="Navigate to Breakfast Plan" />
+                </LinearLayout>
+
+                <!-- Lunch Card -->
+                <LinearLayout
+                    android:id="@+id/lunch_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:background="#D5B586"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp"
+                    android:elevation="4dp">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ic_lunch"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Lunch"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:paddingStart="10dp"
+                        android:textColor="#000" />
+
+                    <ImageView
+                        android:id="@+id/btn_lunch_arrow"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_right"
+                        android:contentDescription="Navigate to Lunch Plan" />
+                </LinearLayout>
+
+                <!-- Dinner Card -->
+                <LinearLayout
+                    android:id="@+id/dinner_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:background="#D5B586"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp"
+                    android:elevation="4dp">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/dinner_icon"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Dinner"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:paddingStart="10dp"
+                        android:textColor="#000" />
+
+                    <ImageView
+                        android:id="@+id/btn_dinner_arrow"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_right"
+                        android:contentDescription="Navigate to Dinner Plan" />
+                </LinearLayout>
+
+                <!-- Snack Card -->
+                <LinearLayout
+                    android:id="@+id/snack_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:background="#D5B586"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp"
+                    android:elevation="4dp">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/snack_icon"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Snacks"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:paddingStart="10dp"
+                        android:textColor="#000" />
+
+                    <ImageView
+                        android:id="@+id/btn_snack_arrow"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_right"
+                        android:contentDescription="Navigate to Snack Plan" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#4E0A0A"
+        android:elevation="0dp"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:backgroundTint="#CC0000"
+        app:itemBackground="@null"
+        app:itemIconSize="25dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="8dp"
+        app:labelVisibilityMode="unlabeled"
+        app:itemRippleColor="#D81B60"/>
+
+
+</RelativeLayout>

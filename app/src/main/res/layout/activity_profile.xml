@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Progress Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile Completion"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_gray"
+                android:layout_marginBottom="8dp"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progressTint="@color/teal_200"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Personal Information Section -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_personal_info"
+                            android:tint="@color/red"
+                            android:layout_marginEnd="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Personal Information"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/red"/>
+                    </LinearLayout>
+
+                    <!-- Name Input -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name *"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark_gray"
+                        android:layout_marginTop="12dp"/>
+
+                    <EditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Enter your full name"
+                        android:background="@drawable/input_background"
+                        android:padding="12dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/gray"
+                        android:layout_marginTop="4dp"/>
+
+                    <!-- Age Input -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Age *"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark_gray"
+                        android:layout_marginTop="12dp"/>
+
+                    <EditText
+                        android:id="@+id/etAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Enter your age"
+                        android:background="@drawable/input_background"
+                        android:inputType="number"
+                        android:padding="12dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/gray"
+                        android:layout_marginTop="4dp"/>
+
+                    <!-- Gender Selection -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gender *"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark_gray"
+                        android:layout_marginTop="12dp"/>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="4dp">
+
+                        <RadioButton
+                            android:id="@+id/radioMale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Male"
+                            android:textColor="@color/dark_gray"
+                            android:buttonTint="@color/teal_200"/>
+
+                        <RadioButton
+                            android:id="@+id/radioFemale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Female"
+                            android:layout_marginStart="16dp"
+                            android:textColor="@color/dark_gray"
+                            android:buttonTint="@color/teal_200"/>
+
+                        <RadioButton
+                            android:id="@+id/radioOther"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Other"
+                            android:layout_marginStart="16dp"
+                            android:textColor="@color/dark_gray"
+                            android:buttonTint="@color/teal_200"/>
+                    </RadioGroup>
+
+                    <!-- Height Input -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Height (cm) *"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark_gray"
+                        android:layout_marginTop="12dp"/>
+
+                    <EditText
+                        android:id="@+id/etHeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Enter height in cm"
+                        android:background="@drawable/input_background"
+                        android:inputType="numberDecimal"
+                        android:padding="12dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/gray"
+                        android:layout_marginTop="4dp"/>
+
+                    <!-- Weight Input -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Weight (kg) *"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark_gray"
+                        android:layout_marginTop="12dp"/>
+
+                    <EditText
+                        android:id="@+id/etWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Enter weight in kg"
+                        android:background="@drawable/input_background"
+                        android:inputType="numberDecimal"
+                        android:padding="12dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/gray"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Blood Work Section -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_blood_work"
+                            android:tint="@color/red"
+                            android:layout_marginEnd="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Blood Work"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/red"/>
+                    </LinearLayout>
+
+                    <!-- Hemoglobin Level -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hemoglobin Level (g/dL) *"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark_gray"
+                        android:layout_marginTop="12dp"/>
+
+                    <EditText
+                        android:id="@+id/etHemoglobin"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Enter hemoglobin level"
+                        android:background="@drawable/input_background"
+                        android:inputType="numberDecimal"
+                        android:padding="12dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/gray"
+                        android:layout_marginTop="4dp"/>
+
+                    <!-- Iron Level -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Iron Level (µg/dL) *"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark_gray"
+                        android:layout_marginTop="12dp"/>
+
+                    <EditText
+                        android:id="@+id/etIron"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Enter iron level"
+                        android:background="@drawable/input_background"
+                        android:inputType="numberDecimal"
+                        android:padding="12dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/gray"
+                        android:layout_marginTop="4dp"/>
+
+                    <!-- Blood Pressure -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Blood Pressure (mmHg) *"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark_gray"
+                        android:layout_marginTop="12dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="4dp">
+
+                        <EditText
+                            android:id="@+id/etSystolic"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:hint="Systolic"
+                            android:background="@drawable/input_background"
+                            android:inputType="number"
+                            android:padding="12dp"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@color/gray"
+                            android:layout_marginEnd="8dp"/>
+
+                        <EditText
+                            android:id="@+id/etDiastolic"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:hint="Diastolic"
+                            android:background="@drawable/input_background"
+                            android:inputType="number"
+                            android:padding="12dp"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@color/gray"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Additional Blood Metrics Section -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_blood_work"
+                            android:tint="@color/red"
+                            android:layout_marginEnd="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Additional Blood Metrics"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/teal_200"/>
+                    </LinearLayout>
+
+                    <!-- Platelet Count -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Platelet Count (×10⁹/L)"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark_gray"
+                        android:layout_marginTop="12dp"/>
+
+                    <EditText
+                        android:id="@+id/etPlatelets"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Enter platelet count"
+                        android:background="@drawable/input_background"
+                        android:inputType="numberDecimal"
+                        android:padding="12dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/gray"
+                        android:layout_marginTop="4dp"/>
+
+                    <!-- WBC Count -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="White Blood Cell Count (×10⁹/L)"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark_gray"
+                        android:layout_marginTop="12dp"/>
+
+                    <EditText
+                        android:id="@+id/etWBC"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Enter WBC count"
+                        android:background="@drawable/input_background"
+                        android:inputType="numberDecimal"
+                        android:padding="12dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/gray"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Vitamin Levels Section -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_vitamin"
+                            android:tint="@color/red"
+                            android:layout_marginEnd="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vitamin Levels"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/red"/>
+                    </LinearLayout>
+
+                    <!-- Vitamin B12 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vitamin B12 (pg/mL)"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark_gray"
+                        android:layout_marginTop="12dp"/>
+
+                    <EditText
+                        android:id="@+id/etVitaminB12"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Enter Vitamin B12 level"
+                        android:background="@drawable/input_background"
+                        android:inputType="numberDecimal"
+                        android:padding="12dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/gray"
+                        android:layout_marginTop="4dp"/>
+
+                    <!-- Vitamin D -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vitamin D (ng/mL)"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark_gray"
+                        android:layout_marginTop="12dp"/>
+
+                    <EditText
+                        android:id="@+id/etVitaminD"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Enter Vitamin D level"
+                        android:background="@drawable/input_background"
+                        android:inputType="numberDecimal"
+                        android:padding="12dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/gray"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Lifestyle Factors Section -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_lifestyle"
+                            android:tint="@color/red"
+                            android:layout_marginEnd="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lifestyle Factors"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/red"/>
+                    </LinearLayout>
+
+                    <!-- Exercise Frequency -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Exercise Frequency (days/week)"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark_gray"
+                        android:layout_marginTop="12dp"/>
+
+                    <EditText
+                        android:id="@+id/etExercise"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Enter exercise frequency"
+                        android:background="@drawable/input_background"
+                        android:inputType="number"
+                        android:padding="12dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/gray"
+                        android:layout_marginTop="4dp"/>
+
+                    <!-- Sleep Duration -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Average Sleep Duration (hours)"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark_gray"
+                        android:layout_marginTop="12dp"/>
+
+                    <EditText
+                        android:id="@+id/etSleep"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Enter sleep duration"
+                        android:background="@drawable/input_background"
+                        android:inputType="numberDecimal"
+                        android:padding="12dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/gray"
+                        android:layout_marginTop="4dp"/>
+
+                    <!-- Water Intake -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Daily Water Intake (L)"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark_gray"
+                        android:layout_marginTop="12dp"/>
+
+                    <EditText
+                        android:id="@+id/etWater"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Enter water intake"
+                        android:background="@drawable/input_background"
+                        android:inputType="numberDecimal"
+                        android:padding="12dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/gray"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/button_background"
+                android:text="Save Profile"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:elevation="6dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#CC0000"
+        android:elevation="0dp"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:backgroundTint="#CC0000"
+        app:itemBackground="@null"
+        app:itemIconSize="25dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="8dp"
+        app:labelVisibilityMode="unlabeled"
+        app:itemRippleColor="#3BA986"/>
+</RelativeLayout>

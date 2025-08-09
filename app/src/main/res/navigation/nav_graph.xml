@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.simats.app.ui.HomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/action_home_to_notifications"
+            app:destination="@id/nav_notifications" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_notifications"
+        android:name="com.simats.app.ui.NotificationsFragment"
+        android:label="Notifications" />
+</navigation>

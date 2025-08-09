@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Title with Icon -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="☀️ Your 7-Day Vegan Breakfast Plan (Hypertension)"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:textColor="#0288D1"
+                android:paddingStart="8dp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <!-- Description -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Low-sodium, potassium-rich vegan breakfasts to support blood pressure management"
+            android:textSize="14sp"
+            android:textColor="#666"
+            android:paddingBottom="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:backgroundTint="#E1F5FE"
+            android:padding="8dp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🗓️ Day-wise Breakfast"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#00796B"
+            android:paddingBottom="12dp" />
+
+        <!-- Day 01 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:paddingBottom="8dp"
+            android:text="Day 01"
+            android:textColor="#333"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:backgroundTint="#E1F5FE">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/tofu"
+                    android:background="@drawable/rounded_corner"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🥗 Tofu Scramble with Raspberries"
+                        android:textSize="16sp"
+                        android:textColor="#01579B"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="½ cup crumbled firm tofu, scrambled with 1 cup spinach, ¼ tsp turmeric, 1 tbsp nutritional yeast (low-sodium), ½ cup raspberries. 295 calories. Why It Helps: Tofu provides protein and magnesium; spinach is high in potassium (~167 mg/cup); raspberries add fiber and antioxidants."
+                        android:textSize="14sp"
+                        android:textColor="#555" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Day 02 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Day 02"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333"
+            android:paddingTop="12dp"
+            android:paddingBottom="8dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:backgroundTint="#E8F5E9">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/peanut_butter"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/rounded_corner"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🥪 Peanut Butter Chia Berry Jam English Muffin"
+                        android:textSize="16sp"
+                        android:textColor="#1B5E20"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1 whole-grain English muffin (low-sodium, &lt;140 mg), 1 tbsp natural peanut butter (no added salt), 1 tbsp chia berry jam (¼ cup mashed berries + 1 tsp chia seeds, no sugar). 262 calories. Why It Helps: Whole grains provide fiber; peanut butter offers healthy fats; berries contribute potassium (~150 mg/¼ cup)."
+                        android:textSize="14sp"
+                        android:textColor="#555" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Day 03 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Day 03"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333"
+            android:paddingTop="12dp"
+            android:paddingBottom="8dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:backgroundTint="#FFF3E0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/yogurt"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/rounded_corner"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🥣 Soy Yogurt with Blackberries and Almonds"
+                        android:textSize="16sp"
+                        android:textColor="#BF360C"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1 cup unsweetened plain soy yogurt, ⅓ cup blackberries, 3 tbsp sliced almonds (unsalted). 286 calories. Why It Helps: Soy yogurt is protein-rich; blackberries provide potassium (~100 mg/⅓ cup) and fiber; almonds add magnesium."
+                        android:textSize="14sp"
+                        android:textColor="#555" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Day 04 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Day 04"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333"
+            android:paddingTop="12dp"
+            android:paddingBottom="8dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:backgroundTint="#F1F8E9">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/chia"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/rounded_corner"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🥣 Chia Seed Pudding with Mango"
+                        android:textSize="16sp"
+                        android:textColor="#33691E"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1 tbsp chia seeds, ¾ cup unsweetened almond milk, ½ cup fresh mango. ~250 calories, 8g protein, 30g carbs, 10g fat. Why It Helps: Chia seeds provide fiber and magnesium; mango is high in potassium (~280 mg/½ cup); almond milk is low in sodium."
+                        android:textSize="14sp"
+                        android:textColor="#555" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Day 05 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Day 05"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333"
+            android:paddingTop="12dp"
+            android:paddingBottom="8dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:backgroundTint="#FFEBEE">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/wheat_wheat_toast_avocado"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/rounded_corner"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🥑 Whole Grain Toast with Avocado and Berries"
+                        android:textSize="16sp"
+                        android:textColor="#B71C1C"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1 slice whole-grain toast (low-sodium, &lt;140 mg), ½ avocado, ½ cup mixed berries. 310 calories, 10g protein, 40g carbs, 12g fat. Why It Helps: Avocado provides potassium (~485 mg/½ avocado) and healthy fats; berries add fiber and antioxidants; whole grains support heart health."
+                        android:textSize="14sp"
+                        android:textColor="#555" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Day 06 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Day 06"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333"
+            android:paddingTop="12dp"
+            android:paddingBottom="8dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:backgroundTint="#E0F7FA">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/pancake"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/rounded_corner"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🥞 Banana Pancakes with Maple Syrup"
+                        android:textSize="16sp"
+                        android:textColor="#006064"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 small pancakes made with almond flour, 1 banana, 1 tsp maple syrup (no added sugar). 280 calories, 8g protein, 40g carbs, 10g fat. Why It Helps: Bananas are rich in potassium (~400 mg); almond flour provides magnesium; minimal maple syrup keeps sodium low."
+                        android:textSize="14sp"
+                        android:textColor="#555" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Day 07 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Day 07"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333"
+            android:paddingTop="12dp"
+            android:paddingBottom="8dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:backgroundTint="#FBE9E7">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/smoothi"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/rounded_corner"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🥤 Blueberry and Almond Butter Smoothie Bowl"
+                        android:textSize="16sp"
+                        android:textColor="#E64A19"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1 cup blueberries, 1 tbsp almond butter (no added salt), ¾ cup unsweetened almond milk, 1 tbsp chia seeds. 350 calories, 15g protein, 40g carbs, 15g fat. Why It Helps: Blueberries provide potassium (~115 mg/cup) and antioxidants; almond butter adds magnesium; chia seeds contribute fiber."
+                        android:textSize="14sp"
+                        android:textColor="#555" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

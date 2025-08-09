@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notification Settings"
+            android:textColor="#D81B60"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Enable/Disable Notifications Switch -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="#F5F5F5"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Enable Notifications"
+                android:textSize="18sp"
+                android:textColor="#212121"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/notifications_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"/>
+        </LinearLayout>
+
+        <!-- Meal Time Settings -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Meal Reminder Times"
+            android:textColor="#00796B"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Breakfast Time -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="#FFEBEE"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Breakfast Time"
+                android:textSize="16sp"
+                android:textColor="#B71C1C"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/breakfast_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="08:00 AM"
+                android:textSize="16sp"
+                android:textColor="#B71C1C"
+                android:padding="8dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"/>
+        </LinearLayout>
+
+        <!-- Lunch Time -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="#E8F5E9"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Lunch Time"
+                android:textSize="16sp"
+                android:textColor="#1B5E20"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/lunch_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00 PM"
+                android:textSize="16sp"
+                android:textColor="#1B5E20"
+                android:padding="8dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"/>
+        </LinearLayout>
+
+        <!-- Dinner Time -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="#FBE9E7"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Dinner Time"
+                android:textSize="16sp"
+                android:textColor="#E64A19"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/dinner_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="06:00 PM"
+                android:textSize="16sp"
+                android:textColor="#E64A19"
+                android:padding="8dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"/>
+        </LinearLayout>
+
+        <!-- Snack Time -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="#E3F2FD"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Snack Time"
+                android:textSize="16sp"
+                android:textColor="#0D47A1"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/snack_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="03:30 PM"
+                android:textSize="16sp"
+                android:textColor="#0D47A1"
+                android:padding="8dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"/>
+        </LinearLayout>
+
+        <!-- Save Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Settings"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#D81B60"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:textSize="16sp"/>
+
+        <!-- Clear All Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/clear_all_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clear All Reminders"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF5252"
+            android:padding="16dp"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:padding="16dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:gravity="center">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Your Diet"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:contentDescription="Diet Preference Selection Header" />
+
+        <!-- Diet Type Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="#FFFFFF"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Your Diet Type (Required)"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#212121"
+                    android:layout_marginBottom="12dp"
+                    android:drawablePadding="8dp"
+                    android:contentDescription="Diet Type Selection Label" />
+
+                <RadioGroup
+                    android:id="@+id/dietTypeGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/vegetarianRadio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🌱 Vegetarian (No meat, includes dairy/eggs)"
+                        android:textSize="16sp"
+                        android:paddingVertical="12dp"
+                        android:textColor="#424242"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="Vegetarian diet option"
+                        app:buttonTint="#4CAF50" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/nonVegetarianRadio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🍗 Non-Vegetarian (Includes meat/fish)"
+                        android:textSize="16sp"
+                        android:paddingVertical="12dp"
+                        android:textColor="#424242"
+                        android:background="?selectableItemBackground"
+                        android:contentDescription="Non-Vegetarian diet option"
+                        app:buttonTint="#4CAF50" />
+                </RadioGroup>
+
+                <!-- Error Message -->
+                <TextView
+                    android:id="@+id/dietTypeError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please select a diet type"
+                    android:textSize="14sp"
+                    android:textColor="#D32F2F"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    android:contentDescription="Diet type selection error" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Continue Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/continueButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:text="Continue"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif-medium"
+            app:cornerRadius="12dp"
+            app:backgroundTint="#4CAF50"
+            app:iconGravity="end"
+            app:rippleColor="#80FFFFFF"
+            android:elevation="4dp"
+            android:contentDescription="Continue to next step" />
+
+    </LinearLayout>
+</ScrollView>

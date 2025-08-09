@@ -1,0 +1,14 @@
+<resources>
+    <!-- Other string resources -->
+
+    <string-array name="meal_options">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Snack</item>
+
+
+        <!-- Add any other meal options you need -->
+    </string-array>
+
+</resources>

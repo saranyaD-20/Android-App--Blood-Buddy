@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Diet Type"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+
+    <RadioGroup
+        android:id="@+id/dietTypeGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp">
+        <RadioButton
+            android:id="@+id/veganRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vegan"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+        <RadioButton
+            android:id="@+id/vegetarianRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vegetarian"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+        <RadioButton
+            android:id="@+id/nonVegetarianRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Non-Vegetarian"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Continue"
+        android:textSize="14sp"
+        style="@style/Widget.MaterialComponents.Button" />
+</LinearLayout>
